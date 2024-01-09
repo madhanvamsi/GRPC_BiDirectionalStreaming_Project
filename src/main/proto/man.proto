@@ -1,0 +1,42 @@
+syntax="proto3";
+option java_package="com.Tayana.Proto";
+option java_multiple_files=true;
+
+service EcommerceService
+{
+	rpc placeOrder(stream OrderRequest) returns (stream OrderResponse) {};
+}
+enum Status
+{
+	SHIPPED=0;
+	PAYMENT_RECEIVED=1;
+	OUT_FOR_DELIVERY=2;
+	DELEVIRED=3;
+}
+enum Category
+{
+	BOOKS=0;
+	ELECTRONICS=1;
+	
+}
+message Message
+{
+ string mess=1;
+}
+ 
+message OrderRequest
+{
+	Category category=1;
+	string name=2;
+	string email=3;
+	int64 phone=4;
+}
+
+message OrderResponse
+{
+	Status orderStatus =1;
+	 repeated Message mess=2;
+}
+
+
+ 
