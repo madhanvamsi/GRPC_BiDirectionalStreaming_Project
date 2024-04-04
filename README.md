@@ -9,6 +9,6 @@ GRPC :
 why we use this ??
 By using this we can do multiplexing (streaming) easily because it supports HTTP/2 .
 And also it is fast,efficient,and it provides better performance when compared to others .
-Here Stream of Request and Responses should be undergone with the same channel so that's why the traffic between channels reduces and it provices more efficiency then it provides high performance 
+Here Stream of Request and Responses should be undergone with the same channel so that's why the traffic between channels reduces due to this it gives more efficiency then automatically it's performance is also get's high. 
 
 
